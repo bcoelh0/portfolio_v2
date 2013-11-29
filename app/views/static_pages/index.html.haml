@@ -9,35 +9,14 @@
     / Bootstrap core CSS
     = stylesheet_link_tag "application"
   %body
-    / Side Menu
-    %a#menu-toggle.btn.btn-primary.btn-lg.toggle{href: "#"}
-      Menu
-    #sidebar-wrapper
-      %ul.sidebar-nav
-        %a#menu-close.btn.btn-default.btn-lg.pull-right.toggle{href: "#"}
-          x
-        %li.sidebar-brand
-          %a{href: "http://startbootstrap.com"} Start Bootstrap
-        %li
-          %a{href: "#top"} Home
-        %li
-          %a{href: "#about"} About
-        %li
-          %a{href: "#services"} Services
-        %li
-          %a{href: "#portfolio"} Portfolio
-        %li
-          %a{href: "#contact"} Contact
-    / /Side Menu
     / Full Page Image Header Area
     #top.header
       .vert-text
-        %h1 Start Bootstrap
+        %h1 Bruno Coelho
         %h3
-          %em We
-          Build Great Templates,
-          %em You
-          Make Them Better
+          %em Web Design
+          &
+          %em Web Development
         %a.btn.btn-default.btn-lg{href: "#about"} Find Out More
     / /Full Page Image Header Area
     / Intro
@@ -45,40 +24,38 @@
       .container
         .row
           .col-md-6.col-md-offset-3.text-center
-            %h2 Subtle Sidebar is the Perfect Template for your Next Portfolio Website Project!
+            %h2 I Develop Websites and Webapps.
             %p.lead
-              This template really has it all. It's up to you to customize it to your liking! It features some fresh photography courtesy of
-              = succeed "." do
-                %a{href: "http://join.deathtothestockphoto.com/", target: "_blank"} Death to the Stock Photo
+              Check out my latest work and services. Feel free to contac me if you need help getting your wedsite together.
     / /Intro
     / Services
     #services.services
       .container
         .row
           .col-md-4.col-md-offset-4.text-center
-            %h2 Our Services
+            %h2 Services Provided
             %hr/
         .row
           .col-md-2.col-md-offset-2.text-center
             .service-item
-              %i.service-icon.fa.fa-rocket
-              %h4 Spacecraft Repair
-              %p Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!
+              = image_tag "web_design.png"
+              %h4 Web Design
+              %p.justify
           .col-md-2.text-center
             .service-item
-              %i.service-icon.fa.fa-magnet
-              %h4 Problem Solving
-              %p Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.
+              = image_tag "web_development.png"
+              %h4 Web Development
+              %p.justify Need a complex web application developed with the lattest and best technilogies? Webapp developemt usind Test Driven Development with Ruby on Rails.
           .col-md-2.text-center
             .service-item
               %i.service-icon.fa.fa-shield
               %h4 Blacksmithing
-              %p Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.
+              %p.justify Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.
           .col-md-2.text-center
             .service-item
               %i.service-icon.fa.fa-pencil
               %h4 Pencil Sharpening
-              %p We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!
+              %p.justify We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!
     / /Services
     / Callout
     .callout
@@ -90,47 +67,45 @@
       .container
         .row
           .col-md-4.col-md-offset-4.text-center
-            %h2 Our Work
+            %h2 Work
             %hr/
         .row
           .col-md-4.col-md-offset-2.text-center
             .portfolio-item
               %a{href: "#"}
                 %img.img-portfolio.img-responsive{src: "/assets/portfolio-1.jpg"}/
-              %h4 Cityscape
+              %h4 Explicas.me
           .col-md-4.text-center
             .portfolio-item
               %a{href: "#"}
                 %img.img-portfolio.img-responsive{src: "/assets/portfolio-2.jpg"}/
-              %h4 Is That On Fire?
+              %h4
+                Rental Manager
+                %small= link_to "[code here]", "#"
         .row
           .col-md-4.col-md-offset-2.text-center
             .portfolio-item
               %a{href: "#"}
                 %img.img-portfolio.img-responsive{src: "/assets/portfolio-3.jpg"}/
-              %h4 Stop Sign
+              %h4
+                Wallet
+                %small= link_to "[code here]", "#"
           .col-md-4.text-center
             .portfolio-item
               %a{href: "#"}
                 %img.img-portfolio.img-responsive{src: "/assets/portfolio-4.jpg"}/
-              %h4 Narrow Focus
+              %h4
+                Sun Shine(?)
+                %small= link_to "[code here]", "#"
     / /Portfolio
     / Call to Action
     .call-to-action
       .container
         .row
           .col-md-6.col-md-offset-3.text-center
-            %h3 The buttons below are impossible to resist.
-            %a.btn.btn-lg.btn-default{href: "#"} Click Me!
-            %a.btn.btn-lg.btn-primary{href: "#"} Look at Me!
+            %h3 Need help with web related stuff? Let's chat a bit.
+            %a.btn.btn-lg.btn-default{href: "mailto:bruno@bccoelho.com"} Contact
     / /Call to Action
-    / Map
-    #contact.map
-      %iframe{frameborder: "0", height: "100%", marginheight: "0", marginwidth: "0", scrolling: "no", src: "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed", width: "100%"}
-      %br/
-      %small
-        %a{href: "https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A"}
-    / /Map
     / Footer
     %footer
       .container
@@ -138,16 +113,18 @@
           .col-md-6.col-md-offset-3.text-center
             %ul.list-inline
               %li
-                %i.fa.fa-facebook.fa-3x
+                = link_to(image_tag("linkedin.png", :size => "40"), "#")
               %li
-                %i.icon-share-alt
+                = link_to(image_tag("twitter.png", :size => "40"), "#")
               %li
-                %i.fa.fa-dribbble.fa-3x
+                = link_to(image_tag("github.png", :size => "40"), "#")
+              %li
+                = link_to(image_tag("tumblr.png", :size => "46"), "#")
             .top-scroll
               %a{href: "#top"}
                 %i.fa.fa-circle-arrow-up.scroll.fa-4x
             %hr/
-            %p Copyright © Company 2013
+            %p bruno@bccoelho.com
     / /Footer
     / JavaScript
     = javascript_include_tag "application"
