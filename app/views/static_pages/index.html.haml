@@ -1,831 +1,181 @@
 !!!
-/[if lt IE 7 ] <html class="ie ie6" lang="en-US">
-/[if IE 7 ] <html class="ie ie7" lang="en-US">
-/[if IE 8 ] <html class="ie ie8" lang="en-US">
-/ [if (gte IE 9)|!(IE)]><!
-%html{lang: "en-US"}
-  / <![endif]
+%html{lang: "en"}
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
-    /
-      Basic Page Needs
-      \==================================================
-    %meta{charset: "UTF-8"}/
-    %title Coffee & Cream | VCARD & PORTFOLIO HTML Template
-    %meta{content: "VCARD", name: "description"}/
-    %meta{content: "Ocholabs", name: "author"}/
-    /
-      Mobile Specific Metas
-      \==================================================
-    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
-    /
-      Favicons
-      \==================================================
-    %link{href: "/assets/favicon.ico", rel: "shortcut icon"}/
-    %link{href: "/assets/apple-touch-icon.png", rel: "apple-touch-icon"}/
-    %link{href: "/assets/apple-touch-icon-72x72.png", rel: "apple-touch-icon", sizes: "72x72"}/
-    %link{href: "/assets/apple-touch-icon-114x114.png", rel: "apple-touch-icon", sizes: "114x114"}/
-    /
-      CSS
-      \==================================================
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "author"}/
+    %title Stylish Portfolio Template for Bootstrap
+    / Bootstrap core CSS
     = stylesheet_link_tag "application"
-    /
-      Google Fonts
-      \==================================================
-    %link{href: "http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,900italic", rel: "stylesheet", type: "text/css"}/
-  %body.fullwidth.boxed{"data-device" => "", "data-maxcols" => ""}
-    #top
-    #header
-      .container.wrap.text-center
-        %span John Doe
-        %span UX Designer
-      %a#menutrigger.pull-right.btn.icon.transparent{href: "index.html#sidr"}
-        %span.glyphicons.justify
-          %i
-      %span.clear
-    / /#header
-    #sidr.hidden
-      %h3 Navigation
-      %a.navclose{href: "index.html#"}
-        %i.icon-heart
-      %ul
+  %body
+    / Side Menu
+    %a#menu-toggle.btn.btn-primary.btn-lg.toggle{href: "#"}
+      Menu
+    #sidebar-wrapper
+      %ul.sidebar-nav
+        %a#menu-close.btn.btn-default.btn-lg.pull-right.toggle{href: "#"}
+          x
+        %li.sidebar-brand
+          %a{href: "http://startbootstrap.com"} Start Bootstrap
         %li
-          %a{href: "index.html#home"}
-            %i.glyphicons-icon.user
-            Home
+          %a{href: "#top"} Home
         %li
-          %a{href: "index.html#about"}
-            %span.glyphicons-icon.user>
-              %i
-            About Me
+          %a{href: "#about"} About
         %li
-          %a{href: "index.html#personalinfo"}
-            %span.glyphicons.nameplate>
-              %i
-            Personal Information
+          %a{href: "#services"} Services
         %li
-          %a{href: "index.html#education"}
-            %span.glyphicons.certificate>
-              %i
-            Education
+          %a{href: "#portfolio"} Portfolio
         %li
-          %a{href: "index.html#employment"}
-            %span.glyphicons.share_alt>
-              %i
-            Employment
-        %li
-          %a{href: "index.html#services"}
-            %span.glyphicons.ok_2>
-              %i
-            What I Do
-        %li
-          %a{href: "index.html#skills"}
-            %span.glyphicons.cogwheels>
-              %i
-            Skills
-        %li
-          %a{href: "index.html#bonus"}
-            %span.glyphicons.gift>
-              %i
-            Bonus
-        %li
-          %a{href: "index.html#portfolio"}
-            %span.glyphicons.briefcase>
-              %i
-            Portfolio
-        %li
-          %a{href: "index.html#clients"}
-            %span.glyphicons.group>
-              %i
-            Clients
-        %li
-          %a{href: "index.html#testimonials"}
-            %span.glyphicons.comments>
-              %i
-            Testimonials
-        %li
-          %a{href: "index.html#services2"}
-            %span.glyphicons.dislikes>
-              %i
-            Services
-        %li
-          %a{href: "index.html#social"}
-            %span.glyphicons.heart>
-              %i
-            Social Media
-        %li
-          %a{href: "index.html#tweetr"}
-            %span.glyphicons.bullhorn>
-              %i
-            Last Tweet
-        %li
-          %a{href: "index.html#contact"}
-            %span.glyphicons.envelope>
-              %i
-            Contact me
-        %li
-          %a{href: "index.html#download"}
-            %span.glyphicons.paperclip>
-              %i
-            Download my Resume
-    #home.sugar-container
-      .container.wrap
+          %a{href: "#contact"} Contact
+    / /Side Menu
+    / Full Page Image Header Area
+    #top.header
+      .vert-text
+        %h1 Start Bootstrap
+        %h3
+          %em We
+          Build Great Templates,
+          %em You
+          Make Them Better
+        %a.btn.btn-default.btn-lg{href: "#about"} Find Out More
+    / /Full Page Image Header Area
+    / Intro
+    #about.intro
+      .container
         .row
-          #animation.col.dimfull.text-center
-            #ccimage.img-circle
-              %img{alt: "", src: "/assets/me.jpg"}/
-            %p#hello Hello, my name is
-            %h1#ccname John DOE
-            %p#iam I am
-            %h2#ccfunction UX Designer
-          / /.col
-        / /.row
-      / /.container
-    / /#home
-    #about.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "1"}
-      .icon-container
-        %div
-          %span.glyphicons.user
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 About Me
-            %p.intro.big Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-          / /.col
-        / /.row
-      / /.container
-    / /#about
-    #personalinfo.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "2"}
-      .icon-container
-        %div
-          %span.glyphicons.nameplate
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Personal Information
-            %dl.row
-              %dt.col.dim1half.text-right.padright Date of birth
-              %dd.col.dim1half.text-left.padleft January 3rd, 1975
-              %dt.col.dim1half.text-right.padright Address
-              %dd.col.dim1half.text-left.padleft
-                99, Amazing Street
-                %br>/
-                New York
-                %br>/
-                USA
-              %dt.col.dim1half.text-right.padright Email
-              %dd.col.dim1half.text-left.padleft john.doe@mymail.com
-              %dt.col.dim1half.text-right.padright Phone
-              %dd.col.dim1half.text-left.padleft
-                974 441 568
-                %br>/
-                732 576 274
-              %dt.col.dim1half.text-right.padright Website
-              %dd.col.dim1half.text-left.padleft
-                %a{href: "index.html#"} myamazingwebsite.com
-          / /.col
-        / /.row
-      / /.container
-    / /#personalinfo
-    #education.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "4"}
-      .icon-container
-        %div
-          %span.glyphicons.certificate
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Education
-            .position2.row
-              .col.dim1third.text-right.padright
-                .date-detail from 2011 to present day
-                %h3 University of Design
-                %p
-                  %strong San Fancisco
-              .col.dim2thirds.text-left.padleft.post-content
-                %h4 Master Degree of Design
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt diam ac lectus tristique scelerisque. Quisque vitae libero sit amet turpis faucibus auctor eget vitae tortor. Aenean metus erat, ultricies non mattis quis, molestie ac massa. Sed sollicitudin erat ac dui viverra a posuere eros adipiscing. Phasellus nisi lectus, imperdiet sed hendrerit ac, dictum quis sem. Phasellus vel nisi non massa elementum porta. Aliquam erat volutpat.
-                %ul
-                  %li
-                    Lorem ipsum dolor sit amet
-                    %ul
-                      %li Lorem ipsum dolor sit amet
-                      %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                .more
-                  %a.btn{href: "index.html#"} See Projects
-                  %a.btn{href: "index.html#"} Company website
-            .position2.row
-              .col.dim1third.text-right.padright
-                .date-detail from 2011 to present day
-                %h3 University of Design
-                %p
-                  %strong San Fancisco
-              .col.dim2thirds.text-left.padleft.post-content
-                %h4 Master Degree of Design
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt diam ac lectus tristique scelerisque. Quisque vitae libero sit amet turpis faucibus auctor eget vitae tortor. Aenean metus erat, ultricies non mattis quis, molestie ac massa. Sed sollicitudin erat ac dui viverra a posuere eros adipiscing. Phasellus nisi lectus, imperdiet sed hendrerit ac, dictum quis sem. Phasellus vel nisi non massa elementum porta. Aliquam erat volutpat.
-                %ul
-                  %li
-                    Lorem ipsum dolor sit amet
-                    %ul
-                      %li Lorem ipsum dolor sit amet
-                      %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                .more
-                  %a.btn{href: "index.html#"} See Projects
-                  %a.btn{href: "index.html#"} Company website
-            .position2.row.last
-              .col.dim1third.text-right.padright
-                .date-detail from 2011 to present day
-                %h3 University of Design
-                %p
-                  %strong San Fancisco
-              .col.dim2thirds.text-left.padleft.post-content
-                %h4 Master Degree of Design
-                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt diam ac lectus tristique scelerisque. Quisque vitae libero sit amet turpis faucibus auctor eget vitae tortor. Aenean metus erat, ultricies non mattis quis, molestie ac massa. Sed sollicitudin erat ac dui viverra a posuere eros adipiscing. Phasellus nisi lectus, imperdiet sed hendrerit ac, dictum quis sem. Phasellus vel nisi non massa elementum porta. Aliquam erat volutpat.
-                %ul
-                  %li
-                    Lorem ipsum dolor sit amet
-                    %ul
-                      %li Lorem ipsum dolor sit amet
-                      %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                  %li Lorem ipsum dolor sit amet
-                .more
-                  %a.btn{href: "index.html#"} See Projects
-                  %a.btn{href: "index.html#"} Company website
-          / /.col
-        / /.row
-      / /.container
-    / /#education
-    #employment.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "8"}
-      .icon-container
-        %div
-          %span.glyphicons.share_alt
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Employment
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            .date-detail from 2011 to present day
-            .position
-              %h3 Company
-              %h4 Senior UX Designer
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt diam ac lectus tristique scelerisque. Quisque vitae libero sit amet turpis faucibus auctor eget vitae tortor. Aenean metus erat, ultricies non mattis quis, molestie ac massa. Sed sollicitudin erat ac dui viverra a posuere eros adipiscing. Phasellus nisi lectus, imperdiet sed hendrerit ac, dictum quis sem. Phasellus vel nisi non massa elementum porta. Aliquam erat volutpat.
-              .more
-                %a.btn{href: "index.html#"} See Projects
-                %a.btn{href: "index.html#"} Company website
-            .date-detail from 2011 to present day
-            .position
-              %h3 Company
-              %h4 Senior UX Designer
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt diam ac lectus tristique scelerisque. Quisque vitae libero sit amet turpis faucibus auctor eget vitae tortor. Aenean metus erat, ultricies non mattis quis, molestie ac massa. Sed sollicitudin erat ac dui viverra a posuere eros adipiscing. Phasellus nisi lectus, imperdiet sed hendrerit ac, dictum quis sem. Phasellus vel nisi non massa elementum porta. Aliquam erat volutpat.
-              .more
-                %a.btn{href: "index.html#"} See Projects
-                %a.btn{href: "index.html#"} Company website
-            .date-detail from 2011 to present day
-            .position.last
-              %h3 Company
-              %h4 Senior UX Designer
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt diam ac lectus tristique scelerisque. Quisque vitae libero sit amet turpis faucibus auctor eget vitae tortor. Aenean metus erat, ultricies non mattis quis, molestie ac massa. Sed sollicitudin erat ac dui viverra a posuere eros adipiscing. Phasellus nisi lectus, imperdiet sed hendrerit ac, dictum quis sem. Phasellus vel nisi non massa elementum porta. Aliquam erat volutpat.
-              .more
-                %a.btn{href: "index.html#"} See Projects
-                %a.btn{href: "index.html#"} Company website
-          / /.col
-        / /.row
-      / /.container
-    / /#employment
-    #services.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "12"}
-      .icon-container
-        %div
-          %span.glyphicons.ok_2
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 What I Do
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            .row.services
-              .col.dim1third
-                %img{alt: "", src: "/assets/iconserv1.png"}/
-                %h3 Service 1
-                %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-              .col.dim1third
-                %img{alt: "", src: "/assets/iconserv2.png"}/
-                %h3 Service 2
-                %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-              .col.dim1third
-                %img{alt: "", src: "/assets/iconserv3.png"}/
-                %h3 Service 3
-                %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-              %span.clear
-              %span.spacer
-              .col.dim1third
-                %img{alt: "", src: "/assets/iconserv4.png"}/
-                %h3 Service 4
-                %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-              .col.dim1third
-                %img{alt: "", src: "/assets/iconserv5.png"}/
-                %h3 Service 5
-                %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-              .col.dim1third
-                %img{alt: "", src: "/assets/iconserv6.png"}/
-                %h3 Service 6
-                %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-            / /.row
-          / /.col
-        / /.row
-      / /.container
-    / /#services
-    #skills.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "16"}
-      .icon-container
-        %div
-          %span.glyphicons.cogwheels
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center.skills
-            %h2 Skills
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            %h3 Stars Rating
-            %dl.row.skills
-              %dt.col.dim1half.text-right.padright Print
-              %dd.col.dim1half.text-left.padleft
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.dislikes
-                  %i
-                %span.glyphicons.dislikes
-                  %i
-              %dt.col.dim1half.text-right.padright Web
-              %dd.col.dim1half.text-left.padleft
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.dislikes
-                  %i
-              %dt.col.dim1half.text-right.padright User Interface
-              %dd.col.dim1half.text-left.padleft
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-                %span.glyphicons.star
-                  %i
-            %br/
-            %h3 Heart Rating
-            %dl.row
-              %dt.col.dim1half.text-right.padright php
-              %dd.col.dim1half.text-left.padleft
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart_empty
-                  %i
-                %span.glyphicons.heart_empty
-                  %i
-              %dt.col.dim1half.text-right.padright javaScript
-              %dd.col.dim1half.text-left.padleft
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart_empty
-                  %i
-              %dt.col.dim1half.text-right.padright HTML
-              %dd.col.dim1half.text-left.padleft
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-                %span.glyphicons.heart
-                  %i
-            %br/
-            %h3 List of Skills
-            %dl.row
-              %dt.col.dim1half.text-right.padright Programming Languages
-              %dd.col.dim1half.text-left.padleft
-                %span.btn HTML5
-                %span.btn CSS3
-                %span.btn javaScript
-                %span.btn jQuery
-                %span.btn php5
-              %dt.col.dim1half.text-right.padright CMS
-              %dd.col.dim1half.text-left.padleft
-                %span.btn WordPress
-                %span.btn Drupal
-                %span.btn Joomla
-          / /.col
-        / /.row
-      / /.container
-    / /#skills
-
-    #portfolio.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "22"}
-      .icon-container
-        %div
-          %span.glyphicons.briefcase
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Portfolio
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            %ul.btn-nav.o-filters.centered{"data-target" => "o-container"}
-              %li.active
-                %a{"data-filter" => "*", href: "index.html#"} All
-              %li
-                %a{"data-filter" => ".o-filterable-cat1", href: "index.html#"} Category 1
-              %li
-                %a{"data-filter" => ".o-filterable-cat2", href: "index.html#"} Category 2
-            #o-container.row.o-items-container.format-mosaic.o-index{"data-cols" => "4"}
-              #item-1.post.hentry.col.o-item.o-filterable-cat1{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio1.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio1.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-2.post.hentry.col.o-item.o-filterable-cat2{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio4.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio4.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-3.post.hentry.col.o-item.o-filterable-cat1{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio2.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio2.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-4.post.hentry.col.o-item.o-filterable-cat2{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio5.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio5.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-5.post.hentry.col.o-item.o-filterable-cat1{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio3.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio3.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-6.post.hentry.col.o-item.o-filterable-cat2{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio6.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio6.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-7.post.hentry.col.o-item.o-filterable-cat1{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio7.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio7.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-              #item-8.post.hentry.col.o-item.o-filterable-cat2{"data-cols" => "1"}
-                .inner-hentry
-                  .posthead
-                    .hovereffect.hoveractions{"data-group" => "portfolio", "data-zoomi18n" => "Zoom", "data-zoomimg" => ".//assets/portfolio8.jpg", "data-zoomtitle" => ""}
-                      %img{alt: "", src: "/assets/portfolio8.jpg"}/
-                / /.inner-hentry
-              / /.col .o-item
-            / /.o-items-container
-          / /.col
-        / /.row
-      / /.container
-    / /#portfolio
-    #clients.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "24"}
-      .icon-container
-        %div
-          %span.glyphicons.group
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Clients
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            .o-carousel
-              .es-carousel-wrapper
-                .es-carousel
-                  %ul{"data-count" => "5"}
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client1.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client2.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client3.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client4.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client5.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client6.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client7.png"}/
-                    %li
-                      %a.fader{href: "index.html#", title: ""}
-                        %img{alt: "", src: "/assets/client8.png"}/
-                / /.es-carousel
-              / /.es-carousel-wrapper
-            / /.o-carousel
-          / /.col
-        / /.row
-      / /.container
-    / /#clients
-    #testimonials.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "22"}
-      .icon-container
-        %div
-          %span.glyphicons.comments
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Testimonials
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            .o-carousel.testimonials
-              .es-carousel-wrapper
-                .es-carousel
-                  %ul{"data-count" => "1"}
-                    %li.row
-                      .col.dim1quarter.padleft
-                        %img.img-circle{alt: "", src: "/assets/testimonial1.jpg"}/
-                      .col.dim3quarters.text-left.padright
-                        %h3 Patrick SMITH
-                        %h4 Director at Company.com
-                        %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                        %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                    %li.row
-                      .col.dim1quarter.padleft
-                        %img.img-circle{alt: "", src: "/assets/testimonial2.jpg"}/
-                      .col.dim3quarters.text-left.padright
-                        %h3 Mark LANDERS
-                        %h4 Employee at Company.com
-                        %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                    %li.row
-                      .col.dim1quarter.padleft
-                        %img.img-circle{alt: "", src: "/assets/testimonial3.jpg"}/
-                      .col.dim3quarters.text-left.padright
-                        %h3 Steeve Work
-                        %h4 Employee at Company.com
-                        %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                / /.es-carousel
-              / /.es-carousel-wrapper
-            / /.o-carousel
-          / /.col
-        / /.row
-      / /.container
-    / /#testimonials
-    #services2.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "25"}
-      .icon-container
-        %div
-          %span.glyphicons.dislikes
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Services
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            %ul.btn-nav.o-filters.centered.padbottom{"data-target" => "o-container2"}
-              %li.active
-                %a{"data-filter" => "#service-1", href: "index.html#"} Service 1
-              %li
-                %a{"data-filter" => "#service-2", href: "index.html#"} Service 2
-              %li
-                %a{"data-filter" => "#service-3", href: "index.html#"} Service 3
-              %li
-                %a{"data-filter" => "#service-4", href: "index.html#"} Service 4
-            #o-container2.row.o-items-container.format-mosaic.o-index.services2{"data-cols" => "1"}
-              #service-1.row.o-item{"data-cols" => "1"}
-                .col.dim1quarter.padright
-                  %img{alt: "", src: "/assets/iconserv1.png"}/
-                .col.dim3quarters.text-left.padleft
-                  %h3 Service 1
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-              / /.col .o-item
-              #service-2.row.o-item.hidden{"data-cols" => "1"}
-                .col.dim1quarter.padright
-                  %img{alt: "", src: "/assets/iconserv2.png"}/
-                .col.dim3quarters.text-left.padleft
-                  %h3 Service 2
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-              / /.col .o-item
-              #service-3.row.o-item.hidden{"data-cols" => "1"}
-                .col.dim1quarter.padright
-                  %img{alt: "", src: "/assets/iconserv4.png"}/
-                .col.dim3quarters.text-left.padleft
-                  %h3 Service 3
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-              / /.col .o-item
-              #service-4.row.o-item.hidden{"data-cols" => "1"}
-                .col.dim1quarter.padright
-                  %img{alt: "", src: "/assets/iconserv3.png"}/
-                .col.dim3quarters.text-left.padleft
-                  %h3 Service 4
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-                  %p Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-              / /.col .o-item
-            / /.o-items-container
-          / /.col
-        / /.row
-      / /.container
-    / /#services2
-    #social.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "24"}
-      .icon-container
-        %div
-          %span.glyphicons.heart
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Social Media
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            .more
-              %a.btn.transparent{href: "index.html#"}
-                %span.glyphicons.facebook>
-                  %i
-                Facebook
-              %a.btn.transparent{href: "index.html#"}
-                %span.glyphicons.twitter>
-                  %i
-                Twitter
-              %a.btn.transparent{href: "index.html#"}
-                %span.glyphicons.google_plus>
-                  %i
-                Google Plus
-              %a.btn.transparent{href: "index.html#"}
-                %span.glyphicons.pinterest>
-                  %i
-                Pinterest
-              %a.btn.transparent{href: "index.html#"}
-                %span.glyphicons.dribbble>
-                  %i
-                Dribble
-          / /.col
-        / /.row
-      / /.container
-    / /#social
-    #tweetr.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "26"}
-      .icon-container
-        %div
-          %span.glyphicons.bullhorn
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Last Tweet
-            #twitterbox{"data-count" => "1", "data-user" => "envato"}
-            .more
-              %br/
-              %a.btn.transparent{href: "index.html#"}
-                %span.glyphicons.twitter>
-                  %i
-                Follow me
-          / /.col
-        / /.row
-      / /.container
-    / /#tweetr
-    #contact.coffee-container.parallax{"data-offsety" => "-150", "data-speed" => "32"}
-      .icon-container
-        %div
-          %span.glyphicons.envelope
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Contact me
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-            %form#contact-form.text-left{action: "#contact-form", "data-form-action" => "./email.php", method: "post"}
-              .email-confirmation.hidden
-                %span.glyphicons.ok_2
-                  %i
-                Email Success
-              .email-error.hidden
-                %span.glyphicons.remove_2
-                  %i
-                Email Error
-              %input{name: "emailto", type: "hidden", value: "contact@ocholabs.com"}/
-              %input{name: "websitename", type: "hidden", value: "VCARD2"}/
-              %p
-                %label{for: "form-name"} Name
-                %input#form-name.mandatory{name: "form-name", placeholder: "Your name", type: "text", value: ""}/
-                %span.error-message.hidden
-                  %span.glyphicons.ban
-                    %i
-                  Missing Name
-              %p
-                %label{for: "form-email"} Email
-                %input#form-email.mandatory{name: "form-email", placeholder: "Your email", type: "text", value: ""}/
-                %span.error-message.hidden
-                  %span.glyphicons.ban
-                    %i
-                  Missing or invalid Email
-              %p
-                %label{for: "form-subject"} Subject
-                %input#form-subject{name: "form-subject", placeholder: "Email Subject", type: "text", value: ""}/
-              %p
-                %label{for: "form-message"} Message
-                %textarea#form-message.mandatory{name: "form-message", placeholder: "Your message", rows: "6"}
-                %span.error-message.hidden
-                  %span.glyphicons.ban
-                    %i
-                  Missing Mail Message
-              %span.clear
-              %p
-                %button.btn.btn-primary{name: "form-submit", type: "submit"} Submit
-          / /.col
-        / /.row
-      / /.container
-    / /#contact
-    #download.cream-container.parallax{"data-offsety" => "-150", "data-speed" => "18"}
-      .icon-container
-        %div
-          %span.glyphicons.paperclip
-            %i
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %h2 Download my Resume
-            %p.intro Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh
-            %a.btn{href: "index.html#"} Download
-          / /.col
-        / /.row
-      / /.container
-    / /#download
-    #copyright
-      .container.wrap
-        .row
-          .col.dimfull.text-center
-            %p
-              \© 2013
+          .col-md-6.col-md-offset-3.text-center
+            %h2 Subtle Sidebar is the Perfect Template for your Next Portfolio Website Project!
+            %p.lead
+              This template really has it all. It's up to you to customize it to your liking! It features some fresh photography courtesy of
               = succeed "." do
-                %em Coffee & Cream
-              %a{href: "http://themeforest.net/user/ocholabs/portfolio?ref=ocholabs"} Ocholabs
-          / /.col
-        / /.row
-      / /.container
-    / /#copyright
-    %a#scrolltop{href: "index.html#", style: "display: none;", title: "Top"}
-      %span.glyphicons.up_arrow
-        %i
-    /
-      End Document
-      \==================================================
+                %a{href: "http://join.deathtothestockphoto.com/", target: "_blank"} Death to the Stock Photo
+    / /Intro
+    / Services
+    #services.services
+      .container
+        .row
+          .col-md-4.col-md-offset-4.text-center
+            %h2 Our Services
+            %hr/
+        .row
+          .col-md-2.col-md-offset-2.text-center
+            .service-item
+              %i.service-icon.fa.fa-rocket
+              %h4 Spacecraft Repair
+              %p Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!
+          .col-md-2.text-center
+            .service-item
+              %i.service-icon.fa.fa-magnet
+              %h4 Problem Solving
+              %p Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.
+          .col-md-2.text-center
+            .service-item
+              %i.service-icon.fa.fa-shield
+              %h4 Blacksmithing
+              %p Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.
+          .col-md-2.text-center
+            .service-item
+              %i.service-icon.fa.fa-pencil
+              %h4 Pencil Sharpening
+              %p We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!
+    / /Services
+    / Callout
+    .callout
+      .vert-text
+        %h1 A Dramatic Text Area
+    / /Callout
+    / Portfolio
+    #portfolio.portfolio
+      .container
+        .row
+          .col-md-4.col-md-offset-4.text-center
+            %h2 Our Work
+            %hr/
+        .row
+          .col-md-4.col-md-offset-2.text-center
+            .portfolio-item
+              %a{href: "#"}
+                %img.img-portfolio.img-responsive{src: "/assets/portfolio-1.jpg"}/
+              %h4 Cityscape
+          .col-md-4.text-center
+            .portfolio-item
+              %a{href: "#"}
+                %img.img-portfolio.img-responsive{src: "/assets/portfolio-2.jpg"}/
+              %h4 Is That On Fire?
+        .row
+          .col-md-4.col-md-offset-2.text-center
+            .portfolio-item
+              %a{href: "#"}
+                %img.img-portfolio.img-responsive{src: "/assets/portfolio-3.jpg"}/
+              %h4 Stop Sign
+          .col-md-4.text-center
+            .portfolio-item
+              %a{href: "#"}
+                %img.img-portfolio.img-responsive{src: "/assets/portfolio-4.jpg"}/
+              %h4 Narrow Focus
+    / /Portfolio
+    / Call to Action
+    .call-to-action
+      .container
+        .row
+          .col-md-6.col-md-offset-3.text-center
+            %h3 The buttons below are impossible to resist.
+            %a.btn.btn-lg.btn-default{href: "#"} Click Me!
+            %a.btn.btn-lg.btn-primary{href: "#"} Look at Me!
+    / /Call to Action
+    / Map
+    #contact.map
+      %iframe{frameborder: "0", height: "100%", marginheight: "0", marginwidth: "0", scrolling: "no", src: "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed", width: "100%"}
+      %br/
+      %small
+        %a{href: "https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A"}
+    / /Map
+    / Footer
+    %footer
+      .container
+        .row
+          .col-md-6.col-md-offset-3.text-center
+            %ul.list-inline
+              %li
+                %i.fa.fa-facebook.fa-3x
+              %li
+                %i.icon-share-alt
+              %li
+                %i.fa.fa-dribbble.fa-3x
+            .top-scroll
+              %a{href: "#top"}
+                %i.fa.fa-circle-arrow-up.scroll.fa-4x
+            %hr/
+            %p Copyright © Company 2013
+    / /Footer
+    / JavaScript
     = javascript_include_tag "application"
-    -#%script{src: "js/jquery.min.js", type: "text/javascript"}
-    -#%script{src: "js/jquery.easing.1.3.js", type: "text/javascript"}
-    -#%script{src: "js/jquery.isotope.min.js", type: "text/javascript"}
-    -#%script{src: "js/jquery.elastislide.js", type: "text/javascript"}
-    -#%script{src: "js/jquery.prettyPhoto.js", type: "text/javascript"}
-    -#%script{src: "js/klass.min.js", type: "text/javascript"}
-    -#%script{src: "js/code.photoswipe.jquery-3.0.4.min.js", type: "text/javascript"}
-    -#%script{src: "js/jquery.jtwt.min.js", type: "text/javascript"}
-    -#%script{src: "js/jquery.sidr.min.js", type: "text/javascript"}
-    -#%script{src: "js/responsiveslides.min.js", type: "text/javascript"}
-    -#%script{src: "js/scripts.js", type: "text/javascript"}
+    / Custom JavaScript for the Side Menu and Smooth Scrolling
+    :javascript
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+    :javascript
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+    :javascript
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+            || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });

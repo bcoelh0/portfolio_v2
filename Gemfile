@@ -10,9 +10,7 @@ gem "jbuilder", "~> 1.2"
 
 gem "haml", "~> 4.0.3"
 gem "haml-rails", "~> 0.4"
-gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
+gem 'bootstrap-sass', '~> 3.0.2.0'
 
 gem "sdoc", require: false, group: :doc
 group :production do
@@ -26,3 +24,4 @@ group :development, :test do
   gem "database_cleaner", "~> 1.0.1"
   gem "debugger"
 end
+
